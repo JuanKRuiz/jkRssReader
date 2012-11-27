@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
+  <Identity Name="8975ProgramasAcademicosMi.BlogIdeasdeUnConejo" Publisher="CN=C55AD8F9-90B7-4EF0-ABFB-0B1CC66BE2DF" Version="1.5.0.2" />
+  <Properties>
+    <DisplayName>Blog Ideas de Un Conejo</DisplayName>
+    <PublisherDisplayName>Programas Academicos</PublisherDisplayName>
+    <Logo>store.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.2.1</OSMinVersion>
+    <OSMaxVersionTested>6.2.1</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="RSSJuanK4Blog.App">
+      <VisualElements DisplayName="Blog ideas de un Conejo" Logo="150.png" SmallLogo="30.png" Description="Es una hermosa App que lee articulos del blog de JuanK , el del blog de ideas de un conejo" ForegroundText="light" BackgroundColor="#040931">
+        <DefaultTile ShowName="noLogos" WideLogo="310.png" />
+        <SplashScreen Image="620.png" BackgroundColor="#040931" />
+        <InitialRotationPreference>
+          <Rotation Preference="landscape" />
+          <Rotation Preference="landscapeFlipped" />
+        </InitialRotationPreference>
+      </VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>

@@ -1,0 +1,108 @@
+﻿<Application
+    x:Class="RSSJuanK4Blog.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:RSSJuanK4Blog"
+    xmlns:common="using:RSSJuanK4Blog.Common"
+    >
+
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Common/StandardStyles.xaml"/>
+                <ResourceDictionary Source="Templates/Templates.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <x:String x:Key="void-img-uri">ms-appx:///Assets/img/just-code.png</x:String>
+            <common:BooleanToVisibilityConverter x:Key="BoolToVisConv" />
+            <common:BooleanNegationConverter x:Key="NegBoolToVisConv" />
+
+            <Style x:Key="Title-Main-Style" TargetType="TextBlock">
+                <Setter Property="FontSize" Value="45"/>
+                <Setter Property="FontWeight" Value="Light"/>
+                <Setter Property="TextWrapping" Value="Wrap" />
+                <Setter Property="Margin" Value="10" />
+                <Setter Property="HorizontalAlignment" Value="Stretch"  />
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="Height" Value="Auto"/>
+            </Style>
+
+            <Style x:Key="Title-Main-Style-snapped" TargetType="TextBlock" BasedOn="{StaticResource Title-Main-Style}">
+                <Setter Property="FontSize" Value="35"/>
+                <Setter Property="Width" Value="220"/>
+                <Setter Property="Margin" Value="5" />
+                <Setter Property="HorizontalAlignment" Value="Left"/>
+            </Style>
+
+
+            <Style x:Key="Logo-Style" TargetType="Image">
+                <Setter Property="Margin" Value="10"/>
+            </Style>
+            <Style x:Key="Title-Post-Style" TargetType="TextBlock" 
+                    BasedOn="{StaticResource Title-Main-Style}" >
+                <Setter Property="FontSize" Value="30"/>
+                <Setter Property="TextTrimming" Value="WordEllipsis"/>
+                <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            </Style>
+            <Style x:Key="WebView-Style" TargetType="WebView">
+                <Setter Property="Visibility" Value="Collapsed"/>
+                <Setter Property="CacheMode" Value="BitmapCache"/>
+                <Setter Property="Margin" Value="10,0"/>
+
+            </Style>
+
+            <Style x:Key="wvWrapper-Style" TargetType="Rectangle">
+                <Setter Property="Margin" Value="10,0"/>
+                <Setter Property="CacheMode" Value="BitmapCache"/>
+            </Style>
+
+            <Style x:Key="Lista-Posts-Style" TargetType="ListView">
+                <Setter Property="Margin" Value="10,0,0,0"/>
+                <Setter Property="Background" Value="#DD1C1C1C"/>
+            </Style>
+            <Style x:Key="Image-Post-List" TargetType="Image" >
+                <Setter Property="Margin" Value="5"/>
+                <Setter Property="Width" Value="120"/>
+                <Setter Property="Height" Value="120"/>
+            </Style>
+            <Style x:Key="Title-PostList-Style" TargetType="TextBlock">
+                <Setter Property="Width" Value="255"/>
+                <Setter Property="Height" Value="Auto"/>
+                <Setter Property="Margin" Value="0,5,5,5"/>
+                <Setter Property="FontSize" Value="18"/>
+                <Setter Property="TextTrimming" Value="WordEllipsis"/>
+            </Style>
+
+            <Style x:Key="Lista-Posts-Style-snapped" TargetType="ListView">
+                <Setter Property="Margin" Value="10,0"/>
+                <Setter Property="Width" Value="300"/>
+                <Setter Property="HorizontalAlignment" Value="Left"/>
+                <Setter Property="Background" Value="#DD1C1C1C"/>
+            </Style>
+            <Style x:Key="Image-Post-List-snapped" TargetType="Image" >
+                <Setter Property="Margin" Value="5"/>
+                <Setter Property="Width" Value="60"/>
+                <Setter Property="Height" Value="60"/>
+            </Style>
+            <Style x:Key="Title-PostList-Style-snapped" TargetType="TextBlock">
+                <Setter Property="Width" Value="185"/>
+                <Setter Property="Height" Value="Auto"/>
+                <Setter Property="Margin" Value="0,5,5,5"/>
+                <Setter Property="FontSize" Value="15"/>
+                <Setter Property="TextTrimming" Value="WordEllipsis"/>
+            </Style>
+
+            <Style x:Key="Summary-PostList-Style" TargetType="TextBlock" 
+                   BasedOn="{StaticResource Title-PostList-Style}">
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="MaxWidth" Value="Infinity"/>
+                <Setter Property="MaxHeight" Value="130"/>
+            </Style>
+            <Style x:Key="rngLoading-Style" TargetType="ProgressRing">
+                <Setter Property="Width" Value="200"/>
+                <Setter Property="Height" Value="200"/>
+                <Setter Property="Foreground" Value="White"/>
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
